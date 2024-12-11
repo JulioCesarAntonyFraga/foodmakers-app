@@ -43,10 +43,14 @@ npm run build
 
 Isto instalará as dependências necessárias para compilar o frontend da App.
 Depois, crie as tabelas do banco de dados com as migrations existentes, executando o seguinte comando:
-`php artisan migrate`
+```
+php artisan migrate
+```
 
 Após as _Migrations_ tiverem sido executadas, você pode iniciar a app com o seguinte comando:
-`php artisan serve --port=8080`
+```
+php artisan serve --port=8080
+```
 
 _OBS: Estamos mudando a porta padrão desta aplicação para que possamos rodar os dois projetos simultaneamente_
 
