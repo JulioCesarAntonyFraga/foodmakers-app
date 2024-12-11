@@ -16,7 +16,7 @@ Para rodar o projeto, você deve precisará ter o [Laravel](https://laravel.com/
 ### Database
 Primeiramente, crie um banco de dados de nome `foodmakers` no sua instância local de MySql, para que a app possa acessar o database. 
 Para fazer isso, abra o seu `MySql Shell` (ou CMD normal) e, com seu usuário MySql, logado execute:
-`CREATE DATABASE foodmakers;`
+```CREATE DATABASE foodmakers;```
 
 ### Variáveis de ambiente
 É importante que você substitua as variáveis de ambiente nos seus arquivos `.env`(nas duas pastas de projeto) para se conectar com o database que acabou de criar:
