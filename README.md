@@ -47,6 +47,11 @@ Depois, crie as tabelas do banco de dados com as migrations existentes, executan
 php artisan migrate
 ```
 
+Certifique-se também de que a app contém uma _Application key_ gerada:
+```
+php artisan key:generate
+```
+
 Após as _Migrations_ tiverem sido executadas, você pode iniciar a app com o seguinte comando:
 ```
 php artisan serve --port=8080
@@ -62,6 +67,7 @@ Vamos repetir um processo parecido na app Cliente, executando os seguintes coman
 npm install
 npm run build
 php artisan migrate
+php artisan key:generate
 php artisan serve --port=8000
 ```
 
