@@ -1,0 +1,80 @@
+.product-form{
+    display: grid;
+    grid-auto-flow: row;
+    margin: auto;
+    margin-top: 200px;
+    width: 60%;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    padding: 30px;
+    /* background-color: red; */
+}
+textarea {
+    resize: none;
+}
+.product-form select{
+    border-radius: 5px 5px 5px 5px;
+    border-color: rgb(243, 243, 243);
+    border-width: 1px 1px 1px 1px;
+    height: 30px;
+}
+.product-form-inputs{
+    display: grid;
+    grid-auto-flow: row;
+    margin-bottom: 10px;
+}
+.product-form input, textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+.product-form button:hover{
+    cursor: pointer;
+}
+.product-form .save-button{
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 0.5px solid #34C759;
+    background-color: #34C759;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.product-form .delete-button{
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 0.5px solid #c73434;
+    background-color: #c73434;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.product{
+    display: flex;
+    padding: 64px;
+    padding-top: 160px;
+    /* background-color: red; */
+}
+@media only screen and (max-width: 800px) {
+    .product-form{
+        width: 90% !important;
+        margin-top: 30px;
+    }
+    .product{
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .product{
+        padding: 0 !important;
+    }
+    .product-form{
+        width: 80% !important;
+        margin: auto !important;
+        padding: 20px !important;
+        /* background-color: red; */
+    }
+}

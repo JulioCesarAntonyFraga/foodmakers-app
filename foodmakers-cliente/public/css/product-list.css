@@ -1,0 +1,121 @@
+.product-card-action-button:hover{
+    cursor: pointer;
+}
+.product-card-action-button{
+    text-align: center;
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: none;
+}
+#amount{
+    text-align: center;
+    /* padding-left: 5px; */
+}
+.list-header{
+    padding-top: 100px;
+    margin: 64px;
+    margin-bottom: -10vh;
+    /* background-color: red; */
+    display: flex;
+}
+.list-header-filters-container select{
+    border-radius: 5px 5px 5px 5px;
+    border-color: rgb(243, 243, 243);
+    border-width: 1px 1px 1px 1px; 
+    height: 30px;
+    width: 130px;
+    /* background-color: gray; */
+}
+
+@media only screen and (max-width: 500px) {
+    .list-header-title-container{
+        width: 90% !important;
+        margin: auto;
+    }
+    .list-header{
+        display: inline-block;
+        margin: auto;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .list-header-filters-container{
+        justify-content: start !important;
+        width: 90% !important;
+        margin: auto;
+    }
+    .list-header-filters-container select{
+        width: 100% !important;
+    }
+    .product-list{
+        margin: 0 !important;
+        width: 100%;
+    }
+    .product-card{
+        width: 100% !important;
+    }
+}
+.list-header div{
+    display: grid;
+    grid-auto-flow: row;
+}
+.list-header-title-container{
+    justify-content: start;
+    width: 70%;
+    /* background-color: red; */
+}
+.list-header-title-container h1{
+    margin-top: 0;
+}
+.list-header-filters-container{
+    justify-content: end;
+    width: 30%;
+    /* background-color: yellow; */
+}
+.list-header-filters-container p{
+    margin-top: 10px;
+}
+
+.product-list{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card{
+    border: 1px solid rgb(0, 0, 0);
+    border-color: rgb(243, 243, 243);
+    border-width: 1px 1px 1px 1px;
+    border-radius: 8px 8px 8px 8px;
+    width: 210px;
+    padding: 10px;
+    margin: 20px;
+    /* background-color: red; */
+}
+.product-card-body{
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    color: black;
+    /* background-color: red; */
+}
+.product-card img{
+    /* background-color: red; */
+    width: 90%;
+    height: 120px;
+    margin: auto;
+}
+.product-card-price{
+    /* background-color: red; */
+    font-weight: bold;
+}
+.product-card-description{
+    font-weight: lighter;
+}
+.product-card-actions{
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 22px;
+    word-spacing: 3px;
+}

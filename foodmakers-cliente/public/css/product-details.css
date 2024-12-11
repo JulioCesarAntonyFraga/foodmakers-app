@@ -1,0 +1,98 @@
+.product-details-card-action-button:hover{
+    cursor: pointer;
+}
+.product-details-card-action-button{
+    text-align: center;
+    font-size: 10px;
+    height: 35px;
+    width: 125px;
+    background-color: #34C759;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+#amount{
+    text-align: center;
+    padding-left: 10px;
+}
+.product-details-card{
+    /* background-color: red; */
+    padding-top: 120px;
+    margin: 64px;
+    display: flex;
+}
+.product-details-card div{
+    display: grid;
+    grid-auto-flow: row;
+}
+@media only screen and (max-width: 800px) {
+    .product-details-card-info{
+        width: 100% !important;
+    }
+    .product-details-card-image{
+        width: 100% !important;
+        /* display: none; */
+    }
+    .product-details-card{
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .product-details-card{
+        margin: auto !important;
+    }
+    .product-details-card-info{
+        padding-top: 0 !important;
+    }
+    #product-details-title{
+        font-size: 20px !important;
+    }
+    #product-details-price{
+        font-size: 42px !important;
+    }
+    #product-details-description{
+        font-size: 14px !important;
+    }
+}
+.product-details-card-info{
+    width: 50%;
+    padding: 90px 60px 90px 60px;
+    /* background-color: yellow; */
+}
+.product-details-card-image{
+    width: 50%;
+    /* display: none; */
+    /* background-color: red; */
+}
+.product-details-card-image img{
+    width: 85%;
+    padding: 40px;
+}
+#product-details-title{
+    /* background-color: red; */
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+#product-details-price{
+    /* background-color: green; */
+    font-weight: bolder;
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+#product-details-description{
+    /* background-color: pink; */
+    font-weight: lighter;
+    font-size: 16px;
+    margin-top: 0;
+}
+.product-details-card-actions{
+    display: flex !important;
+}
+.product-details-card-actions span{
+    display: grid;
+    grid-auto-flow: column;
+    letter-spacing: 10px;
+    font-size: 32px;
+}

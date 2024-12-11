@@ -1,0 +1,133 @@
+textarea {
+    resize: none;
+}
+.product-form select{
+    border-radius: 5px 5px 5px 5px;
+    border-color: rgb(243, 243, 243);
+    border-width: 1px 1px 1px 1px;
+    height: 30px;
+}
+.product-form-inputs{
+    display: grid;
+    grid-auto-flow: row;
+    margin-bottom: 10px;
+}
+.product-form input, textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+.product-form button:hover{
+    cursor: pointer;
+}
+.product-form .save-button{
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 0.5px solid #34C759;
+    background-color: #34C759;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.product-form .delete-button{
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 0.5px solid #c73434;
+    background-color: #c73434;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.product{
+    display: flex;
+    padding: 64px;
+    padding-top: 160px;
+    /* background-color: red; */
+}
+@media only screen and (max-width: 800px) {
+    .image-list-container{
+        width: 90% !important;
+        margin: auto !important;
+    }
+    .product-form{
+        width: 90% !important;
+        margin-top: 30px;
+    }
+    .product{
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .product{
+        padding: 0 !important;
+    }
+    .image-list-container{
+        padding-top: 150px !important;
+        width: 75% !important;
+        margin: auto !important;
+        margin-bottom: 20px;
+    }
+    .product-form{
+        width: 80% !important;
+        margin: auto !important;
+        padding: 20px !important;
+        /* background-color: red; */
+    }
+}
+.product-form{
+    display: grid;
+    grid-auto-flow: row;
+    width: 30%;
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    padding: 30px;
+    /* background-color: red; */
+}
+.image-list-container{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    width: 70%;
+}
+.image-list{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x: hidden;
+    gap: 10px;
+    padding: 30px;
+    height: 400px;
+    /* background-color: aqua; */
+}
+.add-button input{
+    position: absolute;
+    width: 100px !important;
+    height: 100px !important;
+    display: none;
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.image-card{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 5px;
+}
+.image-card-delete, .image-card-delete:hover{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25%;
+    z-index: 100;
+}
+.image-card-image{
+    width: 100%;
+    position: relative;
+}

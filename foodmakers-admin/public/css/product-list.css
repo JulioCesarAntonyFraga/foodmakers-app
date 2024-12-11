@@ -1,0 +1,94 @@
+.product-list-header{
+    width: 80%;
+    margin: auto;
+    padding-top: 200px;
+}
+.product-list-header button, .product-list-header button:hover{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 0.5px solid #34C759;
+    background-color: #34C759;
+    font-weight: bold;
+    font-size: 12px;
+}
+.product-list{
+    display: grid;
+    grid-auto-flow: row;
+    width: 100%;
+    padding-top: 50px;
+}
+.product-card{
+    /* background-color: red; */
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    height: 60px;
+    display: flex;
+    border: 0.5px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.product-card div{
+    display: grid;
+    grid-auto-flow: row;
+}
+.product-card-info{
+    width: 90%;
+    /* padding: 90px 60px 90px 60px; */
+}
+#product-title{
+    /* background-color: green; */
+    font-weight: bolder;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 1px;
+}
+#product-price{
+    font-weight: lighter;
+    font-size: 16px;
+}
+.product-card-actions{
+    width: 10%;
+    display: grid;
+    grid-auto-flow: column !important;
+}
+.product-card-actions div{
+    display: flex;
+    
+}
+.product-card-actions button, .product-card-actions button:hover{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    padding-top: 12.5px;
+}
+.product-card-actions button img{
+    width: 100% !important;
+}
+@media only screen and (max-width: 800px) {
+    .product-card-actions{
+        width: 50% !important;
+        justify-content: end;
+    }
+    .product-card-info{
+        width: 50% !important;
+    }
+    .product-card{
+        width: 70%;
+    }
+    #product-title{
+        font-size: 18px;
+    }
+    #product-price{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 300px){
+    .product-card{
+        height: 100px;
+    }
+}
