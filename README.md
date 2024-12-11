@@ -8,14 +8,14 @@ Nesta app temos dois projetos, separados em pastas diferentes : `foodmakers-admi
 Cada projeto é um MVC, que constitui 3 principais partes: **Model, View e Controller**. 
 
 Nas **Views** temos todo o `HTML`, toda a parte visual da aplicação, que é alimentada com informações pelas **Controllers**, 
-as quais seguem os modelos de daodos definidos pelas **Models**
+as quais seguem os modelos de dados definidos pelas **Models**
 
 ## Como rodar o projeto
 Para rodar o projeto, você deve precisará ter o [Laravel](https://laravel.com/docs/11.x/installation), o [PHP](https://www.php.net/), o [Composer](https://getcomposer.org/), o [Node JS](https://nodejs.org/pt) e o [MySql](https://dev.mysql.com/downloads/installer/) instaldos.
 
 ### Database
-Primeiramente, crie um banco de dados de nome `foodmakers` no sua instância local de MySql, para que a app possa acessar o database. 
-Para fazer isso, abra o seu `MySql Shell` (ou CMD normal) e, com seu usuário MySql, logado execute:
+Primeiramente, crie um banco de dados de nome `foodmakers` na sua instância local de MySql, para que a app possa acessar o database. 
+Para fazer isso, abra o seu `MySql Shell` (ou CMD normal) e, com seu usuário MySql logado, execute:
 ```
 CREATE DATABASE foodmakers;
 ```
