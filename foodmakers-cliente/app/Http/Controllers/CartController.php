@@ -49,10 +49,11 @@ class CartController extends Controller
 
     public function addToCart(String $product_id){
         if (!auth()->user()->cart || !auth()->user()->cart->where('ordered', false)->exists()){
-            auth()->user()->cart()->create();
+            $cart = auth()->user()->cart()->create();
         }
-
-        $cart = auth()->user()->cart->where('ordered', false)->first();
+        else{
+            $cart = auth()->user()->cart->where('ordered', false)->first();
+        }
 
         if ($cart->products->isNotEmpty() && $cart->products()->where('product_id', $product_id)->exists()){
             $cartProduct = $cart->products()->where('product_id', $product_id)->first();
