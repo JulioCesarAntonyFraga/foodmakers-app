@@ -16,7 +16,9 @@ Para rodar o projeto, você deve precisará ter o [Laravel](https://laravel.com/
 ### Database
 Primeiramente, crie um banco de dados de nome `foodmakers` no sua instância local de MySql, para que a app possa acessar o database. 
 Para fazer isso, abra o seu `MySql Shell` (ou CMD normal) e, com seu usuário MySql, logado execute:
-`CREATE DATABASE foodmakers;`
+```
+CREATE DATABASE foodmakers;
+```
 
 ### Variáveis de ambiente
 É importante que você substitua as variáveis de ambiente nos seus arquivos `.env`(nas duas pastas de projeto) para se conectar com o database que acabou de criar:
@@ -28,6 +30,7 @@ DB_DATABASE=foodmakers
 DB_USERNAME={SEU_USUARIO}
 DB_PASSWORD={SUA_SENHA}
 ```
+_OBS: Se não tiver um arquivo `.env`, pode criar um, copiando de `.env.example`, e depois substituir._
 
 ## Rodando a App Admin
 A App admin é o primeiro projeto que deve ser iniciado, pois nele, você poderá criar os produtos que aparecerão na app Cliente no futuro.
@@ -40,10 +43,26 @@ npm run build
 
 Isto instalará as dependências necessárias para compilar o frontend da App.
 Depois, crie as tabelas do banco de dados com as migrations existentes, executando o seguinte comando:
-`php artisan migrate`
+```
+php artisan migrate
+```
+
+Depois de migrado, vamos popular nossa tabela `categories` com alguns dados. Isto será essencial para criação de produtos. Execute no seu Shell MySql:
+```
+INSERT INTO foodmakers.categories (id, name) values (1, 'Lanches');
+INSERT INTO foodmakers.categories (id, name) values (2, 'Bebidas');
+```
+Você sempre pode adicionar mais, caso desejar.
+
+Certifique-se também de que a app contém uma _Application key_ gerada:
+```
+php artisan key:generate
+```
 
 Após as _Migrations_ tiverem sido executadas, você pode iniciar a app com o seguinte comando:
-`php artisan serve --port=8080`
+```
+php artisan serve --port=8080
+```
 
 _OBS: Estamos mudando a porta padrão desta aplicação para que possamos rodar os dois projetos simultaneamente_
 
@@ -55,8 +74,11 @@ Vamos repetir um processo parecido na app Cliente, executando os seguintes coman
 npm install
 npm run build
 php artisan migrate
+php artisan key:generate
 php artisan serve --port=8000
 ```
 
 Com isso, você poderá fazer login com o mesmo usuário que criou anteriormente, ou criar um novo usuário para acessar esta App.
 Nesta App, você poderá escolher produtos e montar carrinhos de compra, e fazer pedidos que ficarão registrados no database automaticamente.
+
+_OBS: Lembrando que a rota de registro está aberta por uma questão de teste. Isto não seria assim numa aplicação real._
