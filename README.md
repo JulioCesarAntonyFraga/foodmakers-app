@@ -47,6 +47,13 @@ Depois, crie as tabelas do banco de dados com as migrations existentes, executan
 php artisan migrate
 ```
 
+Depois de migrado, vamos popular nossa tabela `categories` com alguns dados. Isto será essencial para criação de produtos. Execute no seu Shell MySql:
+```
+INSERT INTO foodmakers.categories (id, name) values (1, 'Lanches');
+INSERT INTO foodmakers.categories (id, name) values (2, 'Bebidas');
+```
+Você sempre pode adicionar mais, caso desejar.
+
 Certifique-se também de que a app contém uma _Application key_ gerada:
 ```
 php artisan key:generate
@@ -73,3 +80,5 @@ php artisan serve --port=8000
 
 Com isso, você poderá fazer login com o mesmo usuário que criou anteriormente, ou criar um novo usuário para acessar esta App.
 Nesta App, você poderá escolher produtos e montar carrinhos de compra, e fazer pedidos que ficarão registrados no database automaticamente.
+
+_OBS: Lembrando que a rota de registro está aberta por uma questão de teste. Isto não seria assim numa aplicação real._
